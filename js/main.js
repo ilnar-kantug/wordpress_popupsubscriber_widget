@@ -1,4 +1,26 @@
-jQuery(document).ready(function(){
+
+jQuery.fn.centerIt = function () {
+	this.css("position","fixed");
+	this.css("top", ((jQuery(window).height() - this.outerHeight()) / 2) + jQuery(window).scrollTop() + "px");
+	this.css("left", ((jQuery(window).width() - this.outerWidth()) / 2) + jQuery(window).scrollLeft() + "px");
+	return this;
+}
+
+function pop_up_subs_form_hide_order() {
+	jQuery('#pop_up_subs_form_overlay').hide();
+	jQuery('#pop_up_subs_form').hide();
+}
+// console.log(object_name);
+setTimeout(function() {
+	jQuery('#pop_up_subs_form_overlay').show();
+	jQuery('#pop_up_subs_form').centerIt().show();
+}, 2000);
+
+
+jQuery(document).ready(function(){	
+	
+	
+	
 	jQuery('#subscriber-form').submit(function(e){
 		e.preventDefault();
 		

@@ -21,35 +21,42 @@
 	 * @param array $instance
 	 */
 	public function widget( $args, $instance ) {
+		
 		// outputs the content of the widget
-		
-		echo $args['before_widget'];
-		
-		echo $args['before_title'];
-			if(!empty($instance['title'])){
-				echo $instance['title'];
-			}
-		echo $args['after_title'];
 		?>
-			<div id="form-msg"></div>
-			<form action="<?=plugins_url().'/subscriber_pop_up_form_wp/includes/newsletter-subscriber-mailer.php'?>" method="post" id="subscriber-form">
-				<div class="form-group">
-					<label for="name">Name:</label><br />
-					<input type="text" id="name" name="name" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label for="email">Email:</label><br />
-					<input type="text" id="email" name="email" class="form-control" required>
-				</div>
-				<br />
-				<input type="hidden" name="recipient" value="<?=$instance['recipient']?>">
-				<input type="hidden" name="subject" value="<?=$instance['subject']?>">
-				<input type="submit" class="btn btn-primary" name="subcriber_submit" value="Subscribe">
-				<br />
-				<br />
-			</form>
+			<div onclick="pop_up_subs_form_hide_order();" id="pop_up_subs_form_overlay">&nbsp;</div>
+			<div id="pop_up_subs_form">
 		<?
-		echo $args['after_widget'];
+			echo $args['before_widget'];
+			
+			echo $args['before_title'];
+				if(!empty($instance['title'])){
+					echo $instance['title'];
+				}
+			echo $args['after_title'];
+			?>
+				<div id="form-msg"></div>
+				<form action="<?=plugins_url().'/subscriber_pop_up_form_wp/includes/newsletter-subscriber-mailer.php'?>" method="post" id="subscriber-form">
+					<div class="form-group">
+						<label for="name">Name:</label><br />
+						<input type="text" id="name" name="name" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label><br />
+						<input type="text" id="email" name="email" class="form-control" required>
+					</div>
+					<br />
+					<input type="hidden" name="recipient" value="<?=$instance['recipient']?>">
+					<input type="hidden" name="subject" value="<?=$instance['subject']?>">
+					<input type="submit" class="btn btn-primary" name="subcriber_submit" value="Subscribe">
+					<br />
+					<br />
+				</form>
+			<?
+			echo $args['after_widget'];
+		?>
+		</div>
+		<?
 	}
 
 	/**

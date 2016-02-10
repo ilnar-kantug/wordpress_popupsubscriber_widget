@@ -13,6 +13,7 @@ if(!defined('ABSPATH')){
  
 //Load Scripts
 require_once(plugin_dir_path(__FILE__).'/includes/newsletter-subscriber-scripts.php');
+ 
  //Load Class
  require_once(plugin_dir_path(__FILE__).'/includes/newsletter-subscriber-class.php');
  

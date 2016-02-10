@@ -1,6 +1,26 @@
+#pop_up_subs_form{
+	background-color: #fff;
+	display:none;
+    z-index: 99999;
+}
+
+#pop_up_subs_form_overlay {
+    background: #000000 none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    opacity: 0.8;
+    position: fixed;
+    width: 100%;
+    z-index: 99998;
+	top: 0px;
+	left: 0px;
+}
+
+
 .error{
 	color:red;
 }
 .success{
 	color:green;
 }
+
