@@ -42,7 +42,7 @@ if( jQuery.cookie('pop_up_subs_form_cookie') != 'doNotShow'){
 	setTimeout(function() {
 		jQuery('#pop_up_subs_form_overlay').show();
 		jQuery('#pop_up_subs_form').centerIt().show();
-	}, 2000);
+	}, 1000);
 
 
 	jQuery(document).ready(function(){

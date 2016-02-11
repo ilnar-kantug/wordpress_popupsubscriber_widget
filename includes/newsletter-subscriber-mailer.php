@@ -20,7 +20,7 @@
 		
 		//writing user data to a csv file
 		$user_CSV[0] = array($name, $email);
-		$fp = fopen('../subscribe_list.csv', 'a');
+		$fp = fopen('../subscribers_list.csv', 'a');
 		foreach ( $user_CSV as $line ) {
 			fputcsv($fp, array_values($line), ';');
 		}
@@ -30,7 +30,7 @@
 		
 		
 		if(mail($recipient,$subject,$message,$headers)){
-			echo 'You are know subscribed';
+			echo 'You are now subscribed';
 		}else{
 			echo 'There was a problem';
 		}
