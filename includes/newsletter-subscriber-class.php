@@ -12,6 +12,7 @@
 		__( 'My Pop Up Subscriber Form','ns_domain' ), // Name
 		array( 'description' => __( 'Just My Pop Up Subscriber Form','ns_domain' ), ) // Args
 	 );
+	 
 	}
 
 	/**
@@ -72,15 +73,15 @@
 		
 		?>
 		<p>
-			<label for="<?=$this->get_field_id('title')?>"><? _e('Title:');?></label>
+			<label for="<?=$this->get_field_id('title')?>"><? _e('Title:','ns_domain');?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?=$this->get_field_id('recipient')?>"><? _e('recipient:');?></label>
+			<label for="<?=$this->get_field_id('recipient')?>"><? _e('recipient:','ns_domain');?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'recipient' ); ?>" name="<?php echo $this->get_field_name( 'recipient' ); ?>" type="text" value="<?php echo esc_attr( $recipient ); ?>">
 		</p>
 		<p>
-			<label for="<?=$this->get_field_id('subject')?>"><? _e('subject:');?></label>
+			<label for="<?=$this->get_field_id('subject')?>"><? _e('subject:','ns_domain');?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'subject' ); ?>" name="<?php echo $this->get_field_name( 'subject' ); ?>" type="text" value="<?php echo esc_attr( $subject ); ?>">
 		</p>	
 		<?

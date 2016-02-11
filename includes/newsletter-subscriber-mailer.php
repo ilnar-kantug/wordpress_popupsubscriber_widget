@@ -9,7 +9,6 @@
 		// Validation
 		if(empty($name) || empty($email)){
 			// Send Error
-			//http_response_code(400);
 			echo 'Please Fill Out All Fields Correctly';
 			exit;
 		}
@@ -17,8 +16,17 @@
 		//Build Email
 		$message = "Name: $name\n";
 		$message .= "Email: $email\n";
-		
 		$headers = "From: $name <$email>";
+		
+		//writing user data to a csv file
+		$user_CSV[0] = array($name, $email);
+		$fp = fopen('../subscribe_list.csv', 'a');
+		foreach ( $user_CSV as $line ) {
+			fputcsv($fp, array_values($line), ';');
+		}
+		fclose($fp);
+		
+		
 		
 		
 		if(mail($recipient,$subject,$message,$headers)){
