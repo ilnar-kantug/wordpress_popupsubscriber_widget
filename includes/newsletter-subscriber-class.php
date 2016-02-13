@@ -9,8 +9,8 @@
 	public function __construct() {
 		parent::__construct(
 		'newsletter_subscriber_widget', // Base ID
-		__( 'My Pop Up Subscriber Form','ns_domain' ), // Name
-		array( 'description' => __( 'Just My Pop Up Subscriber Form','ns_domain' ), ) // Args
+		__( 'Pop Up Subscriber Form','ns_domain' ), // Name
+		array( 'description' => __( 'Just Pop Up Subscriber Form','ns_domain' ), ) // Args
 	 );
 	 
 	}
@@ -27,9 +27,9 @@
 		?>
 		<div onclick="pop_up_subs_form_hide_order();" id="pop_up_subs_form_overlay">&nbsp;</div>
 		<div id="pop_up_subs_form_wrapper">
+			<div id="ns-close"></div>
 			<div id="pop_up_subs_form">
 			<?
-				//var_dump($instance);
 				echo $args['before_widget'];
 				
 				echo $args['before_title'];
@@ -71,11 +71,11 @@
 	 */
 	public function form( $instance ) {
 		// outputs the options form on admin
-		$title = !empty($instance['title']) ? $instance['title'] : __('Pop Up Subscriber Form','ns_domain');
+		$title = !empty($instance['title']) ? $instance['title'] : __('Subscribe Us!','ns_domain');
 		$recipient = !empty($instance['recipient']) ? $instance['recipient'] : 'email@email.com';
 		$subject = !empty($instance['subject']) ? $instance['subject'] : __('New subscriber','ns_domain');
 		$subscribeInput = !empty($instance['subscribeInput']) ? $instance['subscribeInput'] : __('Subscribe','ns_domain');
-		$successMessage = !empty($instance['successMessage']) ? $instance['successMessage'] : 'You are now subscribed';
+		$successMessage = !empty($instance['successMessage']) ? $instance['successMessage'] : __('Thanks! You are now subscribed.','ns_domain');;
 		$showingCounter = !empty($instance['counter']) ? $instance['counter'] : '3';
 		$writingToFileEnable = ! empty( $instance['writingToFileEnable'] ) ? $instance['writingToFileEnable'] : '1';
 		$checked = $instance['writingToFileEnable'] == '1' ? 'checked' : '';

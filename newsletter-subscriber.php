@@ -1,10 +1,11 @@
 <?
 /**
- * Plugin Name: My Pop Up Subscriber Form
- * Description: Just My Pop Up Subscriber Form
+ * Plugin Name: Pop Up Subscriber Form
+ * Description: Just Pop Up Subscriber Form
  * Version: 0.1
  * License: GPL2
  * Text Domain: ns_domain
+ * Site: aurum-web.ru
  */ 
  
  //EXIT if Accessed Directly

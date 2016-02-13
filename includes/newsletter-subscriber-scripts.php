@@ -9,7 +9,6 @@ $ns_widget_datas=get_option('widget_newsletter_subscriber_widget');
 //Getting NS Widget Field without knowing widgets Id in Database
 foreach($ns_widget_datas as $ns_widget_data){
 	if(is_array($ns_widget_data)){
-		//exit(var_dump($ns_widget_data));
 		foreach($ns_widget_data as $key=>$ns_data){
 			if($key == 'counter'){
 				$ns_counter = $ns_data;

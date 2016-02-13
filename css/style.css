@@ -25,8 +25,18 @@
 }
 .ns-success{
 	color:green;
+	font-size: 18px;
 }
 
 .ns-email-error {
     display: none;
+}
+#ns-close{
+	float:right;
+	background:url(../img/close.png) no-repeat 0 0;
+	height:16px;
+	width:16px;
+	margin-top: 10px;
+    margin-right: 10px;
+	cursor:pointer;
 }
