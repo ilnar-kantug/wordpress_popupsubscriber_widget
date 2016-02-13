@@ -1,4 +1,4 @@
-#pop_up_subs_form{
+#pop_up_subs_form_wrapper{
 	background-color: #fff;
 	display:none;
     z-index: 99999;
@@ -15,12 +15,18 @@
 	top: 0px;
 	left: 0px;
 }
+#pop_up_subs_form{
+	padding: 40px 80px 0;
+	margin-bottom: -40px;
+}
 
-
-.error{
+.ns-error, .ns-email-error{
 	color:red;
 }
-.success{
+.ns-success{
 	color:green;
 }
 
+.ns-email-error {
+    display: none;
+}

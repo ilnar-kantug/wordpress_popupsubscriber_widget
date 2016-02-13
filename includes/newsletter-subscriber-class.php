@@ -25,37 +25,41 @@
 		
 		// outputs the content of the widget
 		?>
-			<div onclick="pop_up_subs_form_hide_order();" id="pop_up_subs_form_overlay">&nbsp;</div>
+		<div onclick="pop_up_subs_form_hide_order();" id="pop_up_subs_form_overlay">&nbsp;</div>
+		<div id="pop_up_subs_form_wrapper">
 			<div id="pop_up_subs_form">
-		<?
-			var_dump($instance);
-			echo $args['before_widget'];
-			
-			echo $args['before_title'];
-				if(!empty($instance['title'])){
-					echo $instance['title'];
-				}
-			echo $args['after_title'];
-			?>
-				<div id="form-msg"></div>
-				<form action="<?=plugins_url().'/subscriber_pop_up_form_wp/includes/newsletter-subscriber-mailer.php'?>" method="post" id="subscriber-form">
-					<div class="form-group">
-						<input type="text" id="name" name="name" class="form-control" required placeholder="<? _e('Name Placeholder','ns_domain');?>">
-					</div>
-					<div class="form-group">
-						<input type="text" id="email" name="email" class="form-control" required placeholder="<? _e('Email Placeholder','ns_domain');?>">
-					</div>
-					<br />
-					<input type="hidden" name="recipient" value="<?=$instance['recipient']?>">
-					<input type="hidden" name="subject" value="<?=$instance['subject']?>">
-					<input type="hidden" name="writingToFileEnable" value="<?=$instance['writingToFileEnable']?>">
-					<input type="submit" class="btn btn-primary" name="subcriber_submit" value="<?=$instance['subscribeInput']?>">
-					<br />
-					<br />
-				</form>
 			<?
-			echo $args['after_widget'];
-		?>
+				//var_dump($instance);
+				echo $args['before_widget'];
+				
+				echo $args['before_title'];
+					if(!empty($instance['title'])){
+						echo $instance['title'];
+					}
+				echo $args['after_title'];
+				?>
+					<div id="form-msg"></div>
+					<form action="<?=plugins_url().'/subscriber_pop_up_form_wp/includes/newsletter-subscriber-mailer.php'?>" method="post" id="subscriber-form">
+						<div class="form-group">
+							<input type="text" id="ns-name" name="name" class="form-control" required placeholder="<? _e('Name Placeholder','ns_domain');?>">
+						</div>
+						<div class="form-group">
+							<input type="text" id="ns-email" name="email" class="form-control" required placeholder="<? _e('Email Placeholder','ns_domain');?>">
+						</div>
+						<span class="ns-email-error"><? _e('Not a valid email address','ns_domain');?></span>
+						<br />
+						<input type="hidden" name="recipient" value="<?=$instance['recipient']?>">
+						<input type="hidden" name="subject" value="<?=$instance['subject']?>">
+						<input type="hidden" name="writingToFileEnable" value="<?=$instance['writingToFileEnable']?>">
+						<input type="hidden" name="successMessage" value="<?=$instance['successMessage']?>">
+						<input type="submit" id="ns-submit" class="btn btn-primary" name="subcriber_submit" value="<?=$instance['subscribeInput']?>">
+						<br />
+						<br />
+					</form>
+				<?
+				echo $args['after_widget'];
+			?>
+			</div>
 		</div>
 		<?
 	}
@@ -101,7 +105,7 @@
 			<input class="widefat" id="<?php echo $this->get_field_id( 'counter' ); ?>" name="<?php echo $this->get_field_name( 'counter' ); ?>" type="number" min="0" max="100" step="1" value="<?php echo esc_attr( $showingCounter ); ?>">
 		</p>
 		<p>
-			<label for="<?=$this->get_field_id('writingToFileEnable')?>"><? _e('Write to subscribers_list.csv file:','ns_domain');?></label>&nbsp;&nbsp;
+			<label for="<?=$this->get_field_id('writingToFileEnable')?>"><? _e('Collect subscribers to subscribers_list.csv file:','ns_domain');?></label>&nbsp;&nbsp;
 			<input type="checkbox" id="<?php echo $this->get_field_id( 'writingToFileEnable' ); ?>" name="<?php echo $this->get_field_name( 'writingToFileEnable' ); ?>" value="<?php echo esc_attr( $writingToFileEnable ); ?>" <?=$checked?>>
 		</p>	
 		<?
