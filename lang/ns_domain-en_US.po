@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pop Up Subscriber Form\n"
+"POT-Creation-Date: 2016-02-28 23:02+0300\n"
+"PO-Revision-Date: 2016-02-28 23:03+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: newsletter-subscriber.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: includes/newsletter-subscriber-class.php:12
+msgid "Pop Up Subscriber Form"
+msgstr "Pop Up Subscriber Form"
+
+#. Description of the plugin/theme
+#: includes/newsletter-subscriber-class.php:13
+msgid "Just Pop Up Subscriber Form"
+msgstr "Just Pop Up Subscriber Form"
+
+#: includes/newsletter-subscriber-class.php:44
+msgid "Name Placeholder"
+msgstr "Name"
+
+#: includes/newsletter-subscriber-class.php:47
+msgid "Email Placeholder"
+msgstr "Email"
+
+#: includes/newsletter-subscriber-class.php:49
+msgid "Not a valid email address"
+msgstr "Not valid email address"
+
+#: includes/newsletter-subscriber-class.php:74
+msgid "Subscribe Us!"
+msgstr "Subscribe Us!"
+
+#: includes/newsletter-subscriber-class.php:76
+msgid "New subscriber"
+msgstr "New subscriber"
+
+#: includes/newsletter-subscriber-class.php:77
+msgid "Subscribe"
+msgstr "Subscribe"
+
+#: includes/newsletter-subscriber-class.php:78
+msgid "Thanks! You are now subscribed."
+msgstr "Thanks! You are now subscribed."
+
+#: includes/newsletter-subscriber-class.php:84
+msgid "Pop-up Title:"
+msgstr "Pop-up Title:"
+
+#: includes/newsletter-subscriber-class.php:88
+msgid "Recipient Email:"
+msgstr "Recipient Email:"
+
+#: includes/newsletter-subscriber-class.php:92
+msgid "Email Subject:"
+msgstr "Email Subject:"
+
+#: includes/newsletter-subscriber-class.php:96
+msgid "Subscribe Button Text:"
+msgstr "Subscribe Button Text:"
+
+#: includes/newsletter-subscriber-class.php:100
+msgid "Success message:"
+msgstr "Success message:"
+
+#: includes/newsletter-subscriber-class.php:104
+msgid "How many times show pop-up:"
+msgstr "How many times show pop-up:"
+
+#: includes/newsletter-subscriber-class.php:108
+msgid "Collect subscribers to subscribers_list.csv file:"
+msgstr "Collect subscribers to subscribers_list.csv file:"
+
+#: includes/newsletter-subscriber-mailer.php:14
+msgid "Please Fill Out All Fields Correctly"
+msgstr "Please Fill Out All Fields Correctly"
+
+#: includes/newsletter-subscriber-mailer.php:38
+#: includes/newsletter-subscriber-mailer.php:41
+msgid "There was a problem"
+msgstr "There was a problem"
+
+#: includes/newsletter-subscriber-scripts.php:28
+msgid "Message Was Not Sent"
+msgstr "Message Was Not Sent"
