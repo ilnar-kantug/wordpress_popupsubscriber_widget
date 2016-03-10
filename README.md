@@ -28,3 +28,6 @@ __Всплывающее окно с формой емэйл подписки.__
 * Сбор базы подписчиков в файл subscribers_list.csv 
 
 > Поддержка 2х языков: EN & RU
+
+![screenshot_Eng](/img/screenshot_Eng.jpg?raw=true)
+![screenshot_Ru](/img/screenshot_Ru.jpg?raw=true)
